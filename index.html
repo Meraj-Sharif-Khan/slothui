@@ -105,11 +105,19 @@
 
             <!-- start hero image -->
             <div class="hero__image">
-              <img
-                class="hero-image__2-min"
-                src="./images/desktopPreview/2-min.jpg"
-                alt="Desktop Preview"
-              />
+              <picture>
+                <!-- WebP first -->
+                <source
+                  srcset="./images/desktopPreview/heroDesktopPreview.webp"
+                  type="image/webp"
+                />
+                <!-- Fallback: jpg -->
+                <img
+                  class="hero-image__2-min"
+                  src="./images/desktopPreview/heroDesktopPreview.jpg"
+                  alt="Hero Desktop Preview"
+                />
+              </picture>
               <img
                 class="hero-image__2-1-min"
                 src="./images/mobilePreview/2-1-min.png"
@@ -437,11 +445,13 @@
                 class="who-is-it-for-img"
                 src="./images/mobilePreview/who-is-it-for-1.png"
                 alt="who is it for img"
+                loading="lazy"
               />
               <img
                 class="who-is-it-for-img"
                 src="./images/mobilePreview/who-is-it-for-2.png"
                 alt="who is it for img"
+                loading="lazy"
               />
             </div>
             <!-- end who-is-it-for__image-container -->
@@ -959,11 +969,13 @@
                 class="cta-img-1"
                 src="./images/mobilePreview/demographicsMobilePreview4x.png"
                 alt="Demographics Mobile Preview"
+                loading="lazy"
               />
               <img
                 class="cta-img-2"
                 src="./images/mobilePreview/balanceMobilePreview4x.png"
                 alt="balance Mobile Preview"
+                loading="lazy"
               />
             </div>
           </div>

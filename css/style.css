@@ -291,27 +291,38 @@ a {
 
 /* start hero section */
 
+@supports (background-image: url("../images/heroBg1x.webp")) {
+  .hero {
+    background-image: url("../images/heroBg1x.webp");
+  }
+}
+
 .hero {
   padding-top: 8rem;
-  background-image: url(../images/heroBg1x.jpg);
+  background-image: url(../images/heroBg1x.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background: #4f46e5;
-  background: linear-gradient(
-    0deg,
-    rgba(79, 70, 229, 1) 0%,
-    rgba(255, 255, 255, 1) 45%
-    ); */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4.8rem;
 }
 
+@supports not (background-image: url("../images/heroBg1x.webp")) {
+  .hero {
+    background-image: url("../images/heroBg1x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../images/heroBg2x.jpg);
+    background-image: url(../images/heroBg2x.webp);
+  }
+  @supports not (background-image: url("../images/heroBg2x.webp")) {
+    .hero {
+      background-image: url("../images/heroBg2x.jpg");
+    }
   }
 }
 
@@ -424,8 +435,8 @@ a {
 
 .hero-image__2-1-min {
   position: absolute;
-  width: 12rem;
-  height: 25rem;
+  width: 15rem;
+  height: 31.8rem;
   top: 8.1rem;
   left: 20rem;
 }
@@ -433,8 +444,8 @@ a {
 @media screen and (min-width: 600px) {
   .hero-image__2-1-min {
     position: absolute;
-    width: 17rem;
-    height: 35rem;
+    width: 20rem;
+    height: 42.4rem;
     top: 10rem;
     left: 34rem;
   }
@@ -442,8 +453,8 @@ a {
 @media screen and (min-width: 1024px) {
   .hero-image__2-1-min {
     position: absolute;
-    width: 29rem;
-    height: 64rem;
+    width: 30rem;
+    height: 63.7rem;
     top: 12rem;
     left: 73rem;
   }
