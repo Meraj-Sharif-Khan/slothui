@@ -656,6 +656,11 @@ a {
   font-weight: 700;
   line-height: 6.8rem;
 }
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .statistics-title {
   font-size: 1.8rem;

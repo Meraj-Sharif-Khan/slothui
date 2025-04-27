@@ -214,9 +214,9 @@
       <!-- end Social Proof Section -->
 
       <!-- start feature section -->
-      <div class="feature-section" id="feature" data-aos="fade-up">
+      <div class="feature-section" id="feature">
         <div class="container">
-          <div class="feature-container">
+          <div class="feature-container" data-aos="fade-up">
             <div class="section-header center">
               <span class="badge badge--pill badge--primary"
                 >Our Main Features</span
@@ -369,22 +369,35 @@
               </p>
             </div>
             <!-- end Statistics Section header -->
-            <div class="statistics-body" data-aos="fade-up">
+            <div
+              class="statistics-body"
+              data-aos="fade-up"
+              id="statistics-body"
+            >
               <!-- start statistics -->
               <div class="statistics divider">
-                <h2 class="statistics-value">420%</h2>
-                <h2 class="statistics-title">Data Efficiency</h2>
+                <div class="counter">
+                  <h2 class="statistics-value value" data-target="420">420</h2>
+                  <span class="statistics-value symbol">%</span>
+                </div>
+                <p class="statistics-title">Data Efficiency</p>
               </div>
               <!-- end statistics -->
               <!-- start statistics -->
               <div class="statistics divider">
-                <h2 class="statistics-value">708+</h2>
-                <h2 class="statistics-title">Conversion Rate</h2>
+                <div class="counter">
+                  <h2 class="statistics-value value" data-target="708">708</h2>
+                  <span class="statistics-value symbol">+</span>
+                </div>
+                <p class="statistics-title">Conversion Rate</p>
               </div>
               <!-- end statistics -->
               <!-- start statistics -->
               <div class="statistics">
-                <h2 class="statistics-value">1.82M</h2>
+                <div class="counter">
+                  <h2 class="statistics-value value" data-target="1.82"></h2>
+                  <h2 class="statistics-value symbol">M</h2>
+                </div>
                 <h2 class="statistics-title">AI LLM Scale</h2>
               </div>
               <!-- end statistics -->

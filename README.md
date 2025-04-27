@@ -19,7 +19,7 @@
 <p align="justify">
 This was an awesome experience for me. This task helped me to strengthen my vanilla HTML, CSS, and JavaScript skills Because, For a couple of months, I was learning React.js, Tailwind CSS, Node.js, Express, and MongoDB.
 With this task I have written,
-<strong style="font-style: italic"> More than a thousand line of HTML, a thousand line of CSS and -- line of JavaScript code.</strong>
+<strong style="font-style: italic"> More than a thousand line of HTML, a thousand line of CSS and some JavaScript code.</strong>
 </p>
 
 ## Site Analytics Report
