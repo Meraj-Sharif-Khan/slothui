@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Data Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <main>
@@ -128,12 +131,13 @@
           </div>
         </div>
       </div>
+
       <!-- end hero -->
 
       <!-- start Social Proof Section -->
       <div class="Social-Proof">
         <div class="container">
-          <div class="social-proof-container">
+          <div class="social-proof-container" data-aos="fade-up">
             <div class="social-proof-logo">
               <img
                 class="logo"
@@ -210,7 +214,7 @@
       <!-- end Social Proof Section -->
 
       <!-- start feature section -->
-      <div class="feature-section" id="feature">
+      <div class="feature-section" id="feature" data-aos="fade-up">
         <div class="container">
           <div class="feature-container">
             <div class="section-header center">
@@ -224,7 +228,7 @@
                 ut porttitor leo.
               </p>
             </div>
-            <div class="feature-body">
+            <div class="feature-body" data-aos="fade-up">
               <!-- start feature -->
               <div class="feature">
                 <div class="feature__icon">
@@ -346,12 +350,12 @@
       </div>
       <!-- end feature section -->
 
-      <!-- start Statistics Section -->
+      <!-- start Achivement/Statistics Section -->
       <div class="statistics-section" id="achievements">
         <div class="container">
           <div class="statistics-container">
             <!-- start Statistics Section header -->
-            <div class="section-header center">
+            <div class="section-header center" data-aos="fade-up">
               <span class="badge badge--circle badge--primary badge-icon">
                 <img src="./images/icons/homeIcon.svg" alt="" />
               </span>
@@ -365,7 +369,7 @@
               </p>
             </div>
             <!-- end Statistics Section header -->
-            <div class="statistics-body">
+            <div class="statistics-body" data-aos="fade-up">
               <!-- start statistics -->
               <div class="statistics divider">
                 <h2 class="statistics-value">420%</h2>
@@ -388,10 +392,10 @@
           </div>
         </div>
       </div>
-      <!-- end Statistics Section -->
+      <!-- end Achivement/Statistics Section -->
 
       <!-- start who is it for section -->
-      <div class="who-is-it-for-section">
+      <div class="who-is-it-for-section" data-aos="fade-up">
         <div class="container">
           <div class="section-header">
             <p class="badge badge--pill badge--primary">Who is it for?</p>
@@ -401,7 +405,7 @@
               a lacus. Bibendum at varius vel pharetra vel.
             </p>
           </div>
-          <div class="who-is-it-for-container">
+          <div class="who-is-it-for-container" data-aos="fade-up">
             <!-- start who-is-it-for__text-container -->
             <div class="who-is-it-for__text-container">
               <!-- start who-is-it-for__text -->
@@ -463,7 +467,7 @@
       <!-- start Testimonials section-->
       <div class="testimonials-section" id="testimonials">
         <div class="container">
-          <div class="testimonials-container">
+          <div class="testimonials-container" data-aos="fade-up">
             <div class="section-header center">
               <span class="badge badge--pill badge--primary">Testimonials</span>
               <h2 class="section-header__title">What People Say</h2>
@@ -472,7 +476,7 @@
                 don’t be creepy.
               </p>
             </div>
-            <div class="testimonials-body">
+            <div class="testimonials-body" data-aos="fade-up">
               <!--start testimonial -->
               <div class="testimonials">
                 <div class="testimonials__ratings">
@@ -705,7 +709,7 @@
       <!-- end Testimonials section-->
 
       <!-- start Contact Section -->
-      <div class="contact-section">
+      <div class="contact-section" data-aos="fade-up">
         <div class="container">
           <div class="contact-section-container">
             <div class="section-header">
@@ -718,7 +722,7 @@
                 don’t be creepy.
               </p>
             </div>
-            <div class="contact-section-body">
+            <div class="contact-section-body" data-aos="fade-up">
               <!-- start location card -->
               <div class="location-card">
                 <div class="location__icon">
@@ -767,7 +771,7 @@
 
       <!-- start FAQ Section -->
       <div class="container" id="faq">
-        <div class="faq-container">
+        <div class="faq-container" data-aos="fade-up">
           <div class="section-header center">
             <span class="badge badge--pill badge--primary">FAQ</span>
             <h2 class="section-header__title">Frequently Asked Questions</h2>
@@ -777,7 +781,7 @@
               tempor orci dapibus ultrices.
             </p>
           </div>
-          <div class="faq-body">
+          <div class="faq-body" data-aos="fade-up">
             <!-- start faq question and answer -->
             <div class="collapsible">
               <div class="question-container">
@@ -945,7 +949,7 @@
       <div class="cta-section">
         <div class="container">
           <div class="cta-section-container">
-            <div class="cta-text-area">
+            <div class="cta-text-area" data-aos="fade-up">
               <div class="section-header">
                 <h2 class="section-header__title">Let’s Download The App.</h2>
                 <p class="section-header__paragraph">
@@ -964,7 +968,7 @@
                 </span>
               </div>
             </div>
-            <div class="cta-img-container">
+            <div class="cta-img-container" data-aos="fade-up">
               <img
                 class="cta-img-1"
                 src="./images/mobilePreview/demographicsMobilePreview4x.png"
@@ -1094,5 +1098,9 @@
       <!-- end footer section -->
     </main>
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
