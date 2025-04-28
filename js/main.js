@@ -1,13 +1,7 @@
-const collapsibles = document.querySelectorAll(".collapsible");
-const border = document.querySelectorAll(".who-is-it-for-section .border");
-const testimonialsLoad = document.querySelectorAll(".testimonials.load");
-const loadMoreBtn = document.querySelectorAll(
-  ".testimonials-button-container .btn"
-);
+// function for statistics counter increment
 const counters = document.querySelectorAll(".counter .value");
 const statisticsBody = document.getElementById("statistics-body");
 
-// function for statistics counter increment
 let counterTriggered = 0;
 if (counterTriggered === 0) {
   window.addEventListener("scroll", triggerCounter);
@@ -42,14 +36,26 @@ function triggerCounter() {
 triggerCounter();
 
 // below function for collapsible nav and FAQ
+const collapsibles = document.querySelectorAll(".collapsible");
 
-collapsibles.forEach((e) => {
+collapsibles.forEach((e, i) => {
   e.addEventListener("click", () => {
+    removeFaqCollapsible(i);
     e.classList.toggle("collapsible--expanded");
   });
 });
 
+function removeFaqCollapsible(i) {
+  const faqBody = document.querySelectorAll(".faq-body .collapsible");
+  faqBody.forEach((collapsible, j) => {
+    if (i !== j + 1) {
+      collapsible.classList.remove("collapsible--expanded");
+    }
+  });
+}
 // below function for active border in who is it for section
+
+const border = document.querySelectorAll(".who-is-it-for-section .border");
 window.addEventListener("scroll", activeBorder);
 
 function activeBorder() {
@@ -69,6 +75,10 @@ function activeBorder() {
 activeBorder();
 
 // below function for load more Testimonials
+const testimonialsLoad = document.querySelectorAll(".testimonials.load");
+const loadMoreBtn = document.querySelectorAll(
+  ".testimonials-button-container .btn"
+);
 loadMoreBtn.forEach((e) => {
   let visible = false;
   e.addEventListener("click", () => {
