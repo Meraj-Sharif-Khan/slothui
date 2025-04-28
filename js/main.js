@@ -50,18 +50,23 @@ collapsibles.forEach((e) => {
 });
 
 // below function for active border in who is it for section
-border.forEach((e) => {
-  e.addEventListener("click", () => {
-    removeActiveBorder();
-    e.classList.add("border-active");
-  });
-});
+window.addEventListener("scroll", activeBorder);
 
-function removeActiveBorder() {
+function activeBorder() {
   border.forEach((e) => {
-    e.classList.remove("border-active");
+    const trigger = window.innerHeight / 2.5;
+    const borderTop = e.getBoundingClientRect().top;
+    const borderBottom = e.getBoundingClientRect().bottom;
+
+    if (trigger > borderTop && trigger < borderBottom) {
+      e.classList.add("border-active");
+    } else {
+      e.classList.remove("border-active");
+    }
   });
 }
+
+activeBorder();
 
 // below function for load more Testimonials
 loadMoreBtn.forEach((e) => {
