@@ -70,6 +70,14 @@ function removeFaqCollapsible(i) {
 // below function for who is it for section
 const tab = document.querySelectorAll(".who-is-it-for__text");
 const whoIsItForImg = document.querySelectorAll(".who-is-it-for-img");
+
+import topImgTab1 from "../images/mobilePreview/topImg-tab-1.png";
+import topImgTab2 from "../images/mobilePreview/topImg-tab-2.png";
+import topImgTab3 from "../images/mobilePreview/topImg-tab-3.png";
+import bottomImgTab1 from "../images/mobilePreview/bottomImg-tab-1.png";
+import bottomImgTab2 from "../images/mobilePreview/bottomImg-tab-2.png";
+import bottomImgTab3 from "../images/mobilePreview/bottomImg-tab-3.png";
+
 tab.forEach((e, i) => {
   e.addEventListener("click", () => {
     removeActive();
@@ -93,10 +101,23 @@ function removeActive() {
 }
 
 function changeImg(i) {
-  const imgUrl =
-    "https://raw.githubusercontent.com/Meraj-Sharif-Khan/slothui/main/images";
-  whoIsItForImg[0].src = `${imgUrl}/mobilePreview/topImg-tab-${i + 1}.png`;
-  whoIsItForImg[1].src = `${imgUrl}/mobilePreview/bottomImg-tab-${i + 1}.png`;
+  if (i === 0) {
+    whoIsItForImg[0].src = topImgTab1;
+    whoIsItForImg[1].src = bottomImgTab1;
+  }
+  if (i === 1) {
+    whoIsItForImg[0].src = topImgTab2;
+    whoIsItForImg[1].src = bottomImgTab2;
+  }
+  if (i === 2) {
+    whoIsItForImg[0].src = topImgTab3;
+    whoIsItForImg[1].src = bottomImgTab3;
+  }
+
+  // const imgUrl =
+  //   "https://raw.githubusercontent.com/Meraj-Sharif-Khan/slothui/main/images";
+  // whoIsItForImg[0].src = `${imgUrl}/mobilePreview/topImg-tab-${i + 1}.png`;
+  // whoIsItForImg[1].src = `${imgUrl}/mobilePreview/bottomImg-tab-${i + 1}.png`;
 }
 
 function animate() {
