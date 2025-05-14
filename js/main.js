@@ -37,6 +37,20 @@ triggerCounter();
 
 // below function for collapsible nav and FAQ
 const collapsibles = document.querySelectorAll(".collapsible");
+const navItems = document.querySelectorAll(".nav__list-item>a");
+
+navItems.forEach((e) => {
+  e.addEventListener("click", () => {
+    removeNavActive();
+    e.classList.add("active");
+  });
+});
+
+function removeNavActive() {
+  navItems.forEach((e) => {
+    e.classList.remove("active");
+  });
+}
 
 collapsibles.forEach((e, i) => {
   e.addEventListener("click", () => {
@@ -53,26 +67,47 @@ function removeFaqCollapsible(i) {
     }
   });
 }
-// below function for active border in who is it for section
+// below function for who is it for section
+const tab = document.querySelectorAll(".who-is-it-for__text");
+const whoIsItForImg = document.querySelectorAll(".who-is-it-for-img");
+tab.forEach((e, i) => {
+  e.addEventListener("click", () => {
+    removeActive();
+    removeAnimate();
+    e.classList.add("border-active");
 
-const border = document.querySelectorAll(".who-is-it-for-section .border");
-window.addEventListener("scroll", activeBorder);
+    setTimeout(() => {
+      animate();
+    }, 100);
 
-function activeBorder() {
-  border.forEach((e) => {
-    const trigger = window.innerHeight / 2.5;
-    const borderTop = e.getBoundingClientRect().top;
-    const borderBottom = e.getBoundingClientRect().bottom;
+    setTimeout(() => {
+      changeImg(i);
+    }, 500);
+  });
+});
 
-    if (trigger > borderTop && trigger < borderBottom) {
-      e.classList.add("border-active");
-    } else {
-      e.classList.remove("border-active");
-    }
+function removeActive() {
+  tab.forEach((e) => {
+    e.classList.remove("border-active");
   });
 }
 
-activeBorder();
+function changeImg(i) {
+  whoIsItForImg[0].src = `./images/mobilePreview/topImg-tab-${i + 1}.png`;
+  whoIsItForImg[1].src = `./images/mobilePreview/bottomImg-tab-${i + 1}.png`;
+}
+
+function animate() {
+  whoIsItForImg.forEach((e) => {
+    e.classList.add("animate");
+  });
+}
+
+function removeAnimate() {
+  whoIsItForImg.forEach((e) => {
+    e.classList.remove("animate");
+  });
+}
 
 // below function for load more Testimonials
 const testimonialsLoad = document.querySelectorAll(".testimonials.load");
