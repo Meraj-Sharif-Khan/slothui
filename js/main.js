@@ -93,8 +93,10 @@ function removeActive() {
 }
 
 function changeImg(i) {
-  whoIsItForImg[0].src = `./images/mobilePreview/topImg-tab-${i + 1}.png`;
-  whoIsItForImg[1].src = `./images/mobilePreview/bottomImg-tab-${i + 1}.png`;
+  const imgUrl =
+    "https://raw.githubusercontent.com/Meraj-Sharif-Khan/slothui/main/images";
+  whoIsItForImg[0].src = `${imgUrl}/mobilePreview/topImg-tab-${i + 1}.png`;
+  whoIsItForImg[1].src = `${imgUrl}/mobilePreview/bottomImg-tab-${i + 1}.png`;
 }
 
 function animate() {
