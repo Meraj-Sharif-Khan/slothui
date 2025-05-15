@@ -1011,7 +1011,7 @@ a {
   border: 1px solid var(--color-gray-20);
   border-radius: 2.4rem;
   width: 100%;
-  max-width: 34.3rem;
+  max-width: 384px;
   padding: 2rem;
 }
 
